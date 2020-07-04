@@ -1,7 +1,7 @@
 import React from "react";
-import s from './Chat.module.css'
+import s from './Dialogs.module.css'
 
-const Chat = (props) => {
+const Dialogs = (props) => {
     return (
         <div className={s.chat}>
             Chat
@@ -9,4 +9,4 @@ const Chat = (props) => {
     )
 }
 
-export default Chat
+export default Dialogs

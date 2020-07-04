@@ -1,0 +1,17 @@
+.app {
+    margin: 0 auto;
+    max-width: 900px;
+    display: grid;
+    grid-template-areas: 'n c';
+
+    grid-template-rows: 500px;
+    grid-template-columns: 2fr 10fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    background: #dbffed;
+}
+
+body {
+    background: #dbffed;
+    box-sizing: border-box;
+}

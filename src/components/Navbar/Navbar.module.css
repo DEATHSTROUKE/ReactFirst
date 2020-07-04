@@ -1,14 +1,17 @@
 .nav {
-    background: limegreen;
+    /*background: #35D59D;*/
     grid-area: n;
 }
 
-.link{
+.link {
     text-decoration: none;
-    color: white;
-    margin: 10px;
+    color: #00AB6F;
+    padding: 15px 0 0 10px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
 }
 
-.link a.activeLink {
-    color: gold;
+
+.activeLink {
+    color: #FF7E40;
 }

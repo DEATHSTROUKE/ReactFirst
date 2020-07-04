@@ -1,19 +1,21 @@
 import React from 'react';
-import './App.css';
+import './css/App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
-import Chat from "./components/Chat/Chat";
+import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
     return (
         <BrowserRouter>
+            <Header/>
             <div className="app">
-                <Header/>
                 <Navbar/>
-                <Route path={'/profile'} component={Profile}/>
-                <Route path={'chat'} component={Chat}/>
+                <Route path={'/profile'} render=
+                    {() => <Profile state={props.state.profileData}/>}/>
+                <Route path={'/chat'} render=
+                    {() => <Dialogs state={props.state.dialogsData}/>}/>
             </div>
         </BrowserRouter>
     );

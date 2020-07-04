@@ -1,11 +1,13 @@
 import React from "react";
 import s from './Header.module.css'
+import logo from '../../data/img/logo1.png'
 
 const Header = (props) => {
     return (
-        <div className={s.header}>
-            <img src="https://static.wixstatic.com/media/8629a1_502f37063ebc4e1da70771ab75c2ce72~mv2_d_1455_1454_s_2.png" alt=""
-                 className={s.image}/>
+        <div className={s.bg}>
+            <div className={s.header}>
+                <img src={logo} className={s.image}/>
+            </div>
         </div>
     )
 }

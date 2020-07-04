@@ -1,7 +1,10 @@
 import React from "react";
 import s from './Profile.module.css'
+import Post from "./Post/Post";
 
 const Profile = (props) => {
+    let posts = props.state.posts.map((el) =>
+        <Post id={el.id} text={el.text} likesCount={el.likesCount}/>)
     return (
         <div className={s.profile}>
             <div className={s.header}>
@@ -13,15 +16,7 @@ const Profile = (props) => {
                 </div>
             </div>
             <div className={s.posts}>
-                <div className={s.post}>
-                    First post
-                </div>
-                <div className={s.post}>
-                    Second post
-                </div>
-                <div className={s.post}>
-                    Third post
-                </div>
+                {posts}
             </div>
         </div>
     )
