@@ -5,7 +5,7 @@
 
 .link {
     text-decoration: none;
-    color: #00AB6F;
+    color: #46A080;
     padding: 15px 0 0 10px;
     font-weight: normal;
     letter-spacing: 0.5px;
@@ -13,5 +13,5 @@
 
 
 .activeLink {
-    color: #FF7E40;
+    color: #FF9E6F;
 }
