@@ -1,7 +1,27 @@
 const ADD_POST = 'ADD-POST'
 const SET_LIKE = 'SET-LIKE'
 
-const profileReducer = (state, action) => {
+let initialState = {
+    posts: [
+        {
+            id: 1,
+            text: "Hey! that's my first post",
+            likesCount: 0
+        },
+        {
+            id: 2,
+            text: "Today I'm so happy!",
+            likesCount: 0
+        },
+        {
+            id: 3,
+            text: "Nice",
+            likesCount: 0
+        }
+    ]
+}
+
+const profileReducer = (state=initialState, action) => {
     debugger
     switch (action.type) {
         case ADD_POST: {
