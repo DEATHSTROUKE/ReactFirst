@@ -1,0 +1,32 @@
+.profile {
+    /*background: dodgerblue;*/
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.textarea {
+    width: 400px;
+    height: 80px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    resize: none;
+    padding: 15px;
+}
+
+.add_post {
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: #35D59D;
+    font-size: 14px;
+    margin: 10px 0;
+}

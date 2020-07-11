@@ -13,11 +13,9 @@ const App = (props) => {
             <div className="app">
                 <Navbar/>
                 <Route path={'/profile'} render=
-                    {() => <Profile state={props.state}
-                                    dispatch={props.dispatch}/>}/>
+                    {() => <Profile/>}/>
                 <Route path={'/chat'} render=
-                    {() => <Dialogs state={props.state}
-                                    dispatch={props.dispatch}/>}/>
+                    {() => <Dialogs/>}/>
             </div>
         </div>
     )

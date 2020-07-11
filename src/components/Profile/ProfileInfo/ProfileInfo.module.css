@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.nik {
+    color: #FF9E6F;
+    padding: 10px 50px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.profile__data {
+    display: flex;
+    padding: 10px 0 15px 0;
+
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}

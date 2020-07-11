@@ -1,12 +1,12 @@
 import React from "react";
 import s from './Post.module.css'
 import 'font-awesome/css/font-awesome.min.css';
-import {setLikeCreator} from "../../../redux/profile-reducer";
+import {setLikeAC} from "../../../../redux/profile-reducer";
 
 const Post = (props) => {
     const setLike = (e) => {
         let id = parseInt(e.target.getAttribute('btnId'))
-        props.dispatch(setLikeCreator(id))
+        props.dispatch(setLikeAC(id))
     }
 
     return (

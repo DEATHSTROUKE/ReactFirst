@@ -1,7 +1,9 @@
 const ADD_POST = 'ADD-POST'
 const SET_LIKE = 'SET-LIKE'
+const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT'
 
 let initialState = {
+    newPostText: '',
     posts: [
         {
             id: 1,
@@ -21,38 +23,46 @@ let initialState = {
     ]
 }
 
-const profileReducer = (state=initialState, action) => {
-    debugger
+const profileReducer = (state = initialState, action) => {
+    let stateCopy = {...state, ...state.posts}
     switch (action.type) {
         case ADD_POST: {
-            state.posts.push({
-                id: state.posts.slice(-1)[0].id + 1,
-                text: action.text,
+            stateCopy.posts.push({
+                id: stateCopy.posts.slice(-1)[0].id + 1,
+                text: stateCopy.newPostText,
                 likesCount: 0
             })
-            return state
+            return stateCopy
         }
         case SET_LIKE: {
-            let posts = state.posts
+            let posts = stateCopy.posts
             for (let i = 0; i < posts.length; i++) {
                 if (posts[i].id === action.id) {
                     posts[i].likesCount += 1
                 }
             }
-            return state
+            return stateCopy
+        }
+        case UPDATE_POST_TEXT: {
+            stateCopy.newPostText = action.text
+            return stateCopy
         }
         default: {
-            return state
+            return stateCopy
         }
     }
 }
 
-export const addPostCreator = (text) => {
-    return {type: ADD_POST, text: text}
+export const addPostAC = () => {
+    return {type: ADD_POST}
 }
 
-export const setLikeCreator = (id) => {
+export const setLikeAC = (id) => {
     return {type: SET_LIKE, id: id}
+}
+
+export const updateNewPostAC = (text) => {
+    return {type: UPDATE_POST_TEXT, text: text}
 }
 
 export default profileReducer
